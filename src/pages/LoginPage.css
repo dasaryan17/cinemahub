@@ -1,0 +1,41 @@
+/* LoginPage.css */
+.login-wrapper {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  width: 100%;
+  
+  /* Navbar ki height ko minus karke bachi hui poori screen height lega */
+  min-height: calc(100vh - 70px); 
+  
+  background-color: #000;
+  box-sizing: border-box;
+}
+/* Card width fix */
+.login-card {
+  /* Card ki width fix rakhein taaki wo stretch na ho */
+  width: 100%;
+  max-width: 400px; 
+  padding: 40px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #333;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+/* Input improvement */
+.input-group input {
+  background: #121212;
+  border: 1px solid #444;
+  padding: 14px;
+  border-radius: 4px; /* Shaper corners look more professional */
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Focus state with subtle glow */
+.input-group input:focus {
+  outline: none;
+  border-color: #f5c518;
+  box-shadow: 0 0 8px rgba(245, 197, 24, 0.2);
+}

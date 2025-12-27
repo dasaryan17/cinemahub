@@ -1,0 +1,69 @@
+.movie-card {
+  background: #1A1A1A; /* IMDb card dark gray */
+  border-radius: 4px; /* Sharp corners for professional look */
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  border-color: #F5C518; /* IMDb gold hover */
+}
+
+.poster-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3; /* Fixed ratio prevents stretching */
+  overflow: hidden;
+  background-color: #000;
+}
+
+.movie-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills space without distorting */
+}
+
+.rating-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #F5C518; /* Signature yellow */
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-icon {
+  font-size: 1rem;
+}
+
+.movie-info {
+  padding: 12px;
+  flex-grow: 1;
+}
+
+.movie-title {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+  /* Truncate long titles */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-year {
+  color: #888;
+  font-size: 0.9rem;
+}

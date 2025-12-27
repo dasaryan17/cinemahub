@@ -1,0 +1,57 @@
+.movie-list-container {
+  margin-left: 260px; /* Sidebar space fix */
+  padding: 40px;
+  background-color: #000;
+  min-height: 100vh;
+}
+
+.movie-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  background-color: #1a1a1a; /* IMDb dark gray */
+}
+
+.movie-table th {
+  text-align: left;
+  padding: 15px;
+  background-color: #121212;
+  color: #F5C518; /* IMDb Yellow */
+  border-bottom: 2px solid #333;
+}
+
+.movie-row {
+  border-bottom: 1px solid #333;
+  transition: background 0.2s;
+}
+
+.movie-row:hover {
+  background-color: #2a2a2a; /* Hover effect */
+}
+
+.table-poster-img {
+  width: 45px;
+  height: 67px;
+  object-fit: cover; /* No stretching */
+  border-radius: 2px;
+}
+
+.movie-title-main {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.movie-year-sub {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.star-icon-yellow {
+  color: #F5C518;
+}
+
+/* 📱 Responsive Mobile View */
+@media (max-width: 900px) {
+  .movie-list-container { margin-left: 0; padding: 10px; }
+  .col-rank, .rank-cell { display: none; } /* Rank hide on small screens */
+}

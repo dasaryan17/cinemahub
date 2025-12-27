@@ -1,0 +1,159 @@
+/* Deep Midnight Gradient Background */
+.home-content-container {
+  padding-bottom: 50px;
+  /* Slightly adjusted background for better visibility */
+  background: radial-gradient(circle at 50% -20%, #1a1a2e 0%, #08080a 100%); 
+  min-height: 100vh;
+  color: #E0E0E0; /* Default text color for better contrast */
+}
+
+/* Glassmorphism Search Bar */
+.search-appbar {
+  background: rgba(18, 18, 18, 0.85) !important; /* Slightly less transparent */
+  backdrop-filter: blur(15px);
+  border-bottom: 2px solid rgba(245, 197, 24, 0.5) !important; /* Brighter border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7) !important;
+  padding: 10px 0;
+}
+
+.search-input-premium {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  width: 400px;
+  transition: all 0.3s ease;
+}
+
+.search-input-premium:hover, .search-input-premium:focus-within {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(245, 197, 24, 0.4);
+}
+
+/* Add Movie Button in AppBar */
+.add-movie-btn {
+    color: black !important;
+    background-color: #F5C518 !important; /* Gold background */
+    margin-left: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.add-movie-btn:hover {
+    background-color: #e2b616 !important;
+    transform: scale(1.1); /* Subtle hover effect */
+}
+
+
+/* Genre Chips - Modern Pill Style */
+.genre-chip {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  margin: 4px;
+  font-weight: 600 !important;
+  transition: 0.3s !important;
+}
+
+.genre-chip.active {
+  background: #F5C518 !important; /* Active chip full yellow */
+  color: black !important;
+  box-shadow: 0 4px 15px rgba(245, 197, 24, 0.6);
+}
+
+/* The Premium Movie Card */
+.movie-card-custom {
+  background: #1e1e2f !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  overflow: hidden;
+  position: relative; /* IMPORTANT for overlay positioning */
+  cursor: pointer;
+}
+
+.movie-card-custom:hover {
+  transform: translateY(-10px);
+  border-color: #F5C518 !important; /* Hover border full bright yellow */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.poster-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.poster-img {
+  height: 320px !important; /* Optimized height */
+  object-fit: cover;
+  transition: transform 0.6s ease !important;
+}
+
+.movie-card-custom:hover .poster-img {
+  transform: scale(1.1);
+}
+
+.year-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(245, 197, 24, 0.9);
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+/* Card Typography */
+.card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem !important;
+  color: #fff;
+  height: 50px;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.rating-text {
+  color: #F5C518;
+  font-weight: 800 !important;
+  font-size: 1.1rem !important;
+}
+
+/* Admin Panel Styling (Overlay Effect - replaces the old static block) */
+.admin-actions-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* Allows clicks to pass through when hidden */
+}
+
+/* Show overlay only on card hover */
+.movie-card-custom:hover .admin-actions-overlay {
+  opacity: 1; 
+  pointer-events: all; 
+}
+
+/* Pagination Styling */
+.pagination-premium .MuiPaginationItem-root {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.pagination-premium .Mui-selected {
+  background: #F5C518 !important;
+  color: black !important;
+  font-weight: bold;
+}

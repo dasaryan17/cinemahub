@@ -1,0 +1,84 @@
+/* Container with a subtle gradient to prevent a "flat" black look */
+.home-content-container {
+  padding: 60px 5%;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+  min-height: 100vh;
+}
+
+/* Header with Oswald Font for impact */
+.section-header {
+  border-left: 6px solid var(--primary-color);
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+}
+
+/* Movie Card: The "Netflix" Glassmorphism Look */
+.movie-card-custom {
+  background: var(--bg-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 12px !important; /* Rounder edges for a premium feel */
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Snappy bounce */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card-custom:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 
+              0 0 15px rgba(245, 197, 24, 0.2); /* Subtle gold glow */
+}
+
+/* Poster Styling */
+.poster-img {
+  height: 350px !important;
+  object-fit: cover !important;
+  transition: transform 0.5s ease;
+}
+
+.movie-card-custom:hover .poster-img {
+  transform: scale(1.1); /* Zoom effect inside the card */
+}
+
+/* Card Body Details */
+.card-content {
+  padding: 15px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);
+}
+
+.movie-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-meta {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-badge {
+  color: var(--primary-color);
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
